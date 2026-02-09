@@ -1,0 +1,43 @@
+$card-color: #f3f3f3;
+$primary-color: #ff9900;
+$card-width: 250px;
+
+@mixin button($color) {
+    padding: 10px;
+    border-radius: 100px;
+    border: none;
+    background-color: $color;
+    text-decoration: none;
+
+}
+
+.card {
+    text-align: center;
+    background-color: $card-color;
+    width: $card-width;
+    border-radius: 20px;
+    padding: 10px;
+
+    &__photo {
+        width: 100%;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &__button {
+        @include button($primary-color)
+    }
+
+    &__button:hover {
+        background-color: #d27f01;
+        transform: scale(1.02);
+        cursor: pointer;
+    }
+
+    &__button:active {
+        transform: scale(0.95);
+    }
+}
